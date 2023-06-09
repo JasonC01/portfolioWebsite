@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ComputersCanvas from "./Computers";
+import Fader from "./Fader";
 
 const Hero = () => {
   return (
@@ -9,12 +10,12 @@ const Hero = () => {
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
         <div className="flex-col flex justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#EEA47F]" />
-          <div className="w-1 sm:h-80 h-40 peach-gradient" />
+          <div className="w-5 h-5 rounded-full bg-tertiary" />
+          <div className="w-1 sm:h-80 h-40 orange-gradient" />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#2F3C7E]">ys</span>
+          <h1 className={`${styles.heroHeadText} text-secondary`}>
+            Hi, I'm <span className="text-tertiary">ys</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I am a student at --- <br className="sm:block hidden" />

@@ -15,14 +15,14 @@ import {
 import { motion } from "framer-motion";
 
 import Hero from "./components/Hero";
-import { fadeIn } from "./utils/motion";
+import Fader from "./components/Fader";
 
 function App() {
   return (
     // <div className="relative z-0 y-0">Hi</div>
     // #AABAAE
     <BrowserRouter>
-      <div className="relative z-0 bg-[#8AAAE5] ">
+      <div className="relative z-0 bg-primary ">
         {/* <div className="bg-[#AABAAE]  bg-cover bg-no-repeat bg-center"> */}
         <Navbar />
         <Hero />
@@ -38,10 +38,6 @@ function App() {
             <Projects />
           </div>
 
-          <motion.div className="w-full h-auto absolute inset-0 z-[-1]">
-            {/* <Raining /> */}
-            {/* {init()} */}
-          </motion.div>
           {/* <RainCanvas /> */}
 
           {/* <StarsCanvas /> */}

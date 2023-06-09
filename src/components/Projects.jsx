@@ -2,13 +2,20 @@ import React from "react";
 import Rainfall from "react-rainfall-animation/src/Rain";
 import { connus } from "../assets";
 import { SectionWrapper } from "./hoc";
+import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Rain } from ".";
 import { Raining } from "../components";
+import Fader from "./Fader";
 
 const Projects = () => {
   return (
     <div>
+      <motion.div className="w-full h-auto absolute inset-0 z-[-1]">
+        <Fader component={Raining} />
+        {/* {init()} */}
+      </motion.div>
+      {/* <Fader component={Raining} /> */}
       {/* <Raining /> */}
       {/* <div className="absolute -z-10">{init()}</div> */}
       <div className="flex flex-row w-full h-full items-start justify-start object-contain">
@@ -34,11 +41,14 @@ const Projects = () => {
             <p key="flutter" className={`text-[14px] blue-text-gradient`}>
               # flutter
             </p>
-            <p key="flutter" className={`text-[14px] green-text-gradient`}>
+            <p key="firebase" className={`text-[14px] green-text-gradient`}>
               # firebase
             </p>
-            <p key="flutter" className={`text-[14px] pink-text-gradient`}>
+            <p key="nusmodsAPI" className={`text-[14px] pink-text-gradient`}>
               # nusmodsAPI
+            </p>
+            <p key="weatherAPI" className={`text-[14px] lime-text-gradient`}>
+              # weatherAPI
             </p>
           </div>
         </div>

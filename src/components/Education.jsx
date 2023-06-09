@@ -34,18 +34,10 @@ const Education = () => {
         variants={fadeIn("left", "", "", "0.5")}
         className="flex flex-col justify-start items-start object-contain mt-5"
       >
-        {/* <div className="rounded-full w-20 h-20 bg-white flex flex-row object-contain">
-          <img
-            src={nusLogo}
-            alt="NUS"
-            className="object-contain rounded-full"
-          />
-        </div> */}
-
-        <h1 className="sm:text-[30px] text-[20px] font-black uppercase tracking-wider text-[#2F3C7E] leading-none">
+        <h1 className="sm:text-[30px] text-[20px] font-black uppercase tracking-wider text-tertiary leading-none">
           National University of Singapore
           <br />
-          <span className="text-[#EE4E34] text-[20px]">
+          <span className="text-secondary text-[20px]">
             Bachelor of Computer Science
           </span>
           <br />
@@ -58,16 +50,14 @@ const Education = () => {
           modules including data structures & algorithms, design and analysis of
           algorithms, and software engineering
         </h2>
-        {/* <NearMe /> */}
-        {/* <h2 className="m-0">Bachelor of Computer Science</h2> */}
       </motion.div>
       <br />
       <motion.div variants={fadeIn("right", "", "", "0.5")}>
         <div className="flex flex-col justify-start items-start object-contain mt-5">
-          <h1 className="sm:text-[30px] text-[20px] font-black uppercase tracking-wider text-[#2F3C7E] leading-none">
+          <h1 className="sm:text-[30px] text-[20px] font-black uppercase tracking-wider text-secondary leading-none">
             Sayfol International School
             <br />
-            <span className="text-[#EE4E34] text-[20px]">Graduated</span>
+            <span className="text-tertiary text-[20px]">Graduated</span>
             <br />
             <Map fontSize="small" /> &nbsp;
             <span className="text-[20px]">Kuala Lumpur, Malaysia</span>
@@ -75,9 +65,9 @@ const Education = () => {
           <br />
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center items-start sm:justify-between">
+        <div className="flex flex-col sm:flex-row justify-center items-start sm:justify-between mt-8">
           <div className="flex flex-col items-center">
-            <h1>
+            <h1 className="sm:text-[25px] text-[15px] font-black uppercase tracking-wider text-tertiary leading-none mb-5">
               5 A<sup>*</sup> in Edexcel A Level
             </h1>
             <div>
@@ -87,7 +77,9 @@ const Education = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <h1>Score of 5 in 4 AP tests</h1>
+            <h1 className="sm:text-[25px] text-[15px] font-black uppercase tracking-wider text-tertiary leading-none mb-5">
+              Score of 5 in 4 AP tests
+            </h1>
             <div>
               {apSubjects.map((subject, index) => (
                 <TestCard index={index} key={subject.subject} {...subject} />

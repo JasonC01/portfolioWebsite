@@ -12,7 +12,7 @@ import Create from "@mui/icons-material/Create";
 import { koreanFlag } from "../assets";
 
 const icons = [
-  <div className="flex justify-center items-center w-full h-full ">
+  <div className="flex justify-center items-center w-full h-full">
     <img src={koreanFlag} alt="Flag" className="object-contain" />
   </div>,
   //   <div className="flex justify-center items-center w-full h-full">
@@ -22,8 +22,8 @@ const icons = [
 
 const ExperienceCard = ({ experience, icon }) => (
   <VerticalTimelineElement
-    contentStyle={{ background: "#2F3C7E", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid #2F3C7E" }}
+    contentStyle={{ background: "#575960", color: "#fff" }}
+    contentArrowStyle={{ borderRight: "7px solid #575960" }}
     date={experience.date}
     iconStyle={{ background: "#FFFFFF" }}
     icon={icon}
@@ -32,22 +32,12 @@ const ExperienceCard = ({ experience, icon }) => (
       <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
     </div>
     <div>{experience.content}</div>
-    {/* <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points.map((point, index) => (
-        <li
-          key={`experience-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
-        >
-          {point}
-        </li>
-      ))}
-    </ul> */}
   </VerticalTimelineElement>
 );
 
 const Experience = () => {
   return (
-    <>
+    <div className="mt-20">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far</p>
         <h2 className={styles.sectionHeadText}>Experiences.</h2>
@@ -64,7 +54,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </div>
   );
 };
 
