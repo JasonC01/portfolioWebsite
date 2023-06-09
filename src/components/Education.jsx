@@ -1,0 +1,106 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
+import { styles } from "../styles";
+import { SectionWrapper } from "./hoc";
+import { aLevelSubjects, apSubjects } from "../constants";
+
+// import { nusLogo } from "../assets";
+import Map from "@mui/icons-material/Map";
+import NearMe from "@mui/icons-material/NearMe";
+
+const TestCard = ({ subject, index }) => (
+  <motion.div
+    variants={fadeIn("down", "spring", 0.5 * index, 0.75)}
+    className="w-full  p-[1px] rounded-[20px] shadow-card"
+  >
+    {/* <div
+      options={{ max: 45, scale: 1, speed: 450 }}
+      className="bg-blue-300 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+    > */}
+    <h3 className="text-[20px] text-white font-bold text-center">{subject}</h3>
+    {/* </div> */}
+  </motion.div>
+);
+
+const Education = () => {
+  return (
+    <>
+      <motion.div variants={textVariant()}>
+        {/* <p className={styles.sectionSubText}>Introduction</p> */}
+        <h2 className={styles.sectionHeadText}>Education.</h2>
+      </motion.div>
+      <motion.div
+        variants={fadeIn("left", "", "", "0.5")}
+        className="flex flex-col justify-start items-start object-contain mt-5"
+      >
+        {/* <div className="rounded-full w-20 h-20 bg-white flex flex-row object-contain">
+          <img
+            src={nusLogo}
+            alt="NUS"
+            className="object-contain rounded-full"
+          />
+        </div> */}
+
+        <h1 className="sm:text-[30px] text-[20px] font-black uppercase tracking-wider text-[#2F3C7E] leading-none">
+          National University of Singapore
+          <br />
+          <span className="text-[#EE4E34] text-[20px]">
+            Bachelor of Computer Science
+          </span>
+          <br />
+          <Map fontSize="small" /> &nbsp;
+          <span className="text-[20px]">Singapore</span>
+        </h1>
+        <br />
+        <h2 className={`${styles.sectionSubText}`}>
+          Third year student studying computer science. Completed various
+          modules including data structures & algorithms, design and analysis of
+          algorithms, and software engineering
+        </h2>
+        {/* <NearMe /> */}
+        {/* <h2 className="m-0">Bachelor of Computer Science</h2> */}
+      </motion.div>
+      <br />
+      <motion.div variants={fadeIn("right", "", "", "0.5")}>
+        <div className="flex flex-col justify-start items-start object-contain mt-5">
+          <h1 className="sm:text-[30px] text-[20px] font-black uppercase tracking-wider text-[#2F3C7E] leading-none">
+            Sayfol International School
+            <br />
+            <span className="text-[#EE4E34] text-[20px]">Graduated</span>
+            <br />
+            <Map fontSize="small" /> &nbsp;
+            <span className="text-[20px]">Kuala Lumpur, Malaysia</span>
+          </h1>
+          <br />
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-center items-start sm:justify-between">
+          <div className="flex flex-col items-center">
+            <h1>
+              5 A<sup>*</sup> in Edexcel A Level
+            </h1>
+            <div>
+              {aLevelSubjects.map((subject, index) => (
+                <TestCard index={index} key={subject.subject} {...subject} />
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <h1>Score of 5 in 4 AP tests</h1>
+            <div>
+              {apSubjects.map((subject, index) => (
+                <TestCard index={index} key={subject.subject} {...subject} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* <NearMe /> */}
+        {/* <h2 className="m-0">Bachelor of Computer Science</h2> */}
+      </motion.div>
+    </>
+  );
+};
+
+export default SectionWrapper(Education, "education");
