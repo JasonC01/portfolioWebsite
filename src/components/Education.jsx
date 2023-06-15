@@ -65,7 +65,7 @@ const Education = () => {
           <br />
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center items-start sm:justify-between mt-8">
+        <div className="flex flex-col justify-center items-center sm:flex-row sm:items-start sm:justify-between mt-8 sm:space-y-0 space-y-5">
           <div className="flex flex-col items-center">
             <h1 className="sm:text-[25px] text-[15px] font-black uppercase tracking-wider text-tertiary leading-none mb-5">
               5 A<sup>*</sup> in Edexcel A Level

@@ -21,7 +21,7 @@ const Fader = ({ component }) => {
     }, 5000);
     return () => clearInterval(timeout);
   }, [fadeProp]);
-  return <div className={fadeProp.fade}>{component()}</div>;
+  return <div className={`${fadeProp.fade}`}>{component()}</div>;
 };
 
 Fader.defaultProps = {

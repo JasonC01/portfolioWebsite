@@ -17,15 +17,16 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-secondary`}>
             Hi, I'm <span className="text-tertiary">ys</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a student at --- <br className="sm:block hidden" />
+          <p className={`${styles.heroSubText} mt-2 text-white`}>
+            I am a third year student at <br className="sm:block hidden" />
+            National University of Singapore <br className="sm:block hidden" />
             studying computer science
           </p>
         </div>
       </div>
       {/* Justify-center for horizontal alignmemnt, 
         items-start for vertical alignment */}
-      {/* <ComputersCanvas /> */}
+      <ComputersCanvas />
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           {/* <div className="w-[300px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-center p-2"> */}

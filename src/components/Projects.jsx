@@ -10,17 +10,11 @@ import Fader from "./Fader";
 
 const Projects = () => {
   return (
-    <div>
-      <motion.div className="w-full h-auto absolute inset-0 z-[-1]">
+    <div className="w-full h-fit">
+      <div className="w-full h-min absolute inset-0 z-[-1]">
         <Fader component={Raining} />
-        {/* {init()} */}
-      </motion.div>
-      {/* <Fader component={Raining} /> */}
-      {/* <Raining /> */}
-      {/* <div className="absolute -z-10">{init()}</div> */}
+      </div>
       <div className="flex flex-row w-full h-full items-start justify-start object-contain">
-        {/* <div className="flex w-full h-full"> */}
-
         <img
           src={connus}
           alt="connus"

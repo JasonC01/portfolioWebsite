@@ -12,11 +12,8 @@ import {
   Raining,
   StarsCanvas,
 } from "./components";
-import { motion } from "framer-motion";
-
-import Hero from "./components/Hero";
 import Fader from "./components/Fader";
-
+import Hero from "./components/Hero";
 function App() {
   return (
     // <div className="relative z-0 y-0">Hi</div>
@@ -34,14 +31,8 @@ function App() {
         <Education />
 
         <div className="relative z-90">
-          <div className="">
-            <Projects />
-          </div>
-
-          {/* <RainCanvas /> */}
-
-          {/* <StarsCanvas /> */}
-          {/* <ReactRain numDrops="500" /> */}
+          <Projects />
+          {/* <Fader component={Raining} /> */}
         </div>
         <Experiences />
         <div className="">
