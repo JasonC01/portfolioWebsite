@@ -37,7 +37,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-white text-[17px] max-w-3xl leading-[30px]"
+        className={`${styles.sectionSubText} mt-4`}
       >
         I drank a cup of iced americano today. It was cold because it was iced.
         Do you like americano? If you do, you must drink it iced.

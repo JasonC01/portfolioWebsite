@@ -21,15 +21,15 @@ export const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Android/IOS developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Full stack developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Problem solving",
     icon: creator,
   },
 ];

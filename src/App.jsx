@@ -14,6 +14,7 @@ import {
 } from "./components";
 import Fader from "./components/Fader";
 import Hero from "./components/Hero";
+import { SectionWrapper } from "./components/hoc";
 function App() {
   return (
     // <div className="relative z-0 y-0">Hi</div>
@@ -30,8 +31,11 @@ function App() {
 
         <Education />
 
-        <div className="relative z-90">
+        <div className="relative z-90 overflow-hidden">
           <Projects />
+          <div className="w-full h-fit absolute inset-0 z-[-1]">
+            <Fader component={Raining} />
+          </div>
           {/* <Fader component={Raining} /> */}
         </div>
         <Experiences />

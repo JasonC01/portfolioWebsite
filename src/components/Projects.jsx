@@ -11,14 +11,11 @@ import Fader from "./Fader";
 const Projects = () => {
   return (
     <div className="w-full h-fit">
-      <div className="w-full h-min absolute inset-0 z-[-1]">
-        <Fader component={Raining} />
-      </div>
       <div className="flex flex-row w-full h-full items-start justify-start object-contain">
         <img
           src={connus}
           alt="connus"
-          className={`h-[42%] w-[42%] -skew-y-12 blur-edge object-contain`}
+          className={`sm:h-[30%] sm:w-[30%] h-[42%] w-[42%] -skew-y-12 blur-edge object-contain`}
         />
         {/* </div> */}
         <div className="ml-16 relative -top-16 justify-start items-start">
