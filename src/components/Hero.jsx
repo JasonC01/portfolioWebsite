@@ -15,7 +15,11 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-secondary`}>
-            Hi, I'm <span className="text-tertiary">ys</span>
+            Hi, I'm{" "}
+            <span className="text-tertiary">
+              <br className="sm:hidden" />
+              Yunseong
+            </span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white`}>
             I am a third year student at <br className="sm:block hidden" />
@@ -27,7 +31,8 @@ const Hero = () => {
       {/* Justify-center for horizontal alignmemnt, 
         items-start for vertical alignment */}
       <ComputersCanvas />
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center ">
         <a href="#about">
           {/* <div className="w-[300px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-center p-2"> */}
           <motion.div
